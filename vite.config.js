@@ -26,7 +26,7 @@ export default defineConfig({
     }
   },
   publicDir: 'public',
-  base: './', // Use relative path for assets in production
+  base: '/portfolio/', // Use relative path for assets in production
   resolve: {
     alias: {
       '@': resolve(__dirname, 'src')
