@@ -3,8 +3,8 @@ import { useEffect, useState, useRef, useCallback } from "react";
 const IMAGES = [
   {
     src: "/assets/images/project1.jpg",
-    alt: "Speed-o-meter",
-    caption: "Sebességmérő tesztelése",
+    alt: "TIL305-Clock",
+    caption: "TIL305 óra",
   },
   {
     src: "/assets/images/project2.jpg",
