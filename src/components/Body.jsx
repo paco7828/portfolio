@@ -311,10 +311,10 @@ const Body = () => {
           detail="Az első CanSat melyhez a teljes működő szoftvert készítettem el és csapatommal Tudományos különdíjat érdemeltünk ki."
         />
         <ProjectCard
-          title="CanSat kereső"
-          sub="ESP32 · LoRa · 2025"
-          github="https://github.com/paco7828/Cansat-Finder"
-          detail="Hordozható és paraméterezhető LoRa telemetria és GPS alapú keresőeszköz egy CanSat megtalálásához."
+          title="Univerzális távirányító"
+          sub="IR · ESP32 · 2023"
+          github="https://github.com/paco7828/universal-remote"
+          detail="IR jelek tárolása és visszajátszása érintőkijelzős felülettel."
         />
         <ProjectCard
           title="TIL305 Óra"
@@ -323,10 +323,10 @@ const Body = () => {
           detail="Vintage LED kijelzős óra modern vezérléssel és időszinkronizációval."
         />
         <ProjectCard
-          title="Univerzális távirányító"
-          sub="IR · ESP32 · 2023"
-          github="https://github.com/paco7828/universal-remote"
-          detail="IR jelek tárolása és visszajátszása érintőkijelzős felülettel."
+          title="CanSat kereső"
+          sub="ESP32 · LoRa · 2025"
+          github="https://github.com/paco7828/Cansat-Finder"
+          detail="Hordozható és paraméterezhető LoRa telemetria és GPS alapú keresőeszköz egy CanSat megtalálásához."
         />
         <ProjectCard
           title="Növényfelügyelő eszköz"
