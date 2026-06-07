@@ -16,22 +16,20 @@ function SocialIcon({ href, icon }) {
   );
 }
 
-function Study({ year, status, href, children }) {
+function Study({ year, status, href, children, lang }) {
   const isActive = status === "active";
   return (
     <div className={"study-item" + (isActive ? " study-active" : "")}>
       <div className="study-year">{year}</div>
       <div className="study-text">
-        {href
-          ? <a href={href} target="_blank" rel="noopener noreferrer">{children}</a>
-          : children}
+        {href ? <a href={href} target="_blank" rel="noopener noreferrer">{children}</a> : children}
       </div>
-      {isActive && <div className="study-badge">Folyamatban</div>}
+      {isActive && <div className="study-badge">{lang === "hu" ? "Folyamatban" : "In progress"}</div>}
     </div>
   );
 }
 
-const RightSide = () => {
+const RightSide = ({ lang }) => {
   useEffect(() => {
     const timer = setTimeout(() => {
       const obs = new IntersectionObserver(
@@ -46,26 +44,51 @@ const RightSide = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  const content = {
+    hu: {
+      team: "Csapatom",
+      team_desc: <>A <strong><a href="https://canseat.hu/" target="_blank" rel="noopener noreferrer">S.E.A.T.</a></strong> egy 2024-ben alapított csapat, amelynek 2025 óta aktív tagja vagyok. Eddig két CanSat-et építettünk össze; a jövőben robotikával és LoRa-alapú rádiókommunikációs hálózatokkal tervezünk foglalkozni.</>,
+      role: <><strong>Szerepem:</strong> 2025-ben versenyzőként, 2026-ban mentorként vettem részt.</>,
+      sponsors: <><strong>Szponzoraink:</strong></>,
+      interests: "Érdeklődési területek",
+      i1: "Elektronika és áramkörtervezés",
+      i2: "Beágyazott rendszerek és mikrokontrollerek",
+      i3: "Űripar és műholdas technológiák",
+      i4: "3D tervezés és nyomtatás",
+      i5: "Járművek és mechanikai rendszerek",
+      studies: "Tanulmányok",
+      st1: "Pécsi Tudományegyetem Műszaki és Informatikai Kar - Mérnökinformatikus BSc",
+      st2: "Baranya Vármegyei SzC Radnóti Miklós Közgazdasági Technikum - Szoftverfejlesztő és -tesztelő",
+      st3: "Deák Ferenc Gimnázium és Általános Iskola",
+    },
+    en: {
+      team: "My Team",
+      team_desc: <><strong><a href="https://canseat.hu/" target="_blank" rel="noopener noreferrer">S.E.A.T.</a></strong> is a team founded in 2024, of which I have been an active member since 2025. We have built two CanSats so far; in the future, we plan to focus on robotics and LoRa-based radio communication networks.</>,
+      role: <><strong>Role:</strong> Competed as a contestant in 2025, and participated as a mentor in 2026.</>,
+      sponsors: <><strong>Sponsors:</strong></>,
+      interests: "Interests",
+      i1: "Electronics and Circuit Design",
+      i2: "Embedded Systems and Microcontrollers",
+      i3: "Space Industry and Satellite Technologies",
+      i4: "3D Design and Printing",
+      i5: "Vehicles and Mechanical Systems",
+      studies: "Education",
+      st1: "University of Pécs, Faculty of Engineering and Information Technology - Computer Science Engineering BSc",
+      st2: "Baranya County SZC Radnóti Miklós Technical School - Software Developer and Tester",
+      st3: "Deák Ferenc High School and Elementary School",
+    }
+  }[lang];
+
   return (
     <aside className="cv-right-sidebar">
-      <h2>Csapatom</h2>
-      <p>
-        A <strong><a href="https://canseat.hu/" target="_blank" rel="noopener noreferrer">S.E.A.T.</a></strong>{" "}
-        egy 2024-ben alapított csapat, amelynek 2025 óta aktív tagja vagyok. Eddig két
-        CanSat-et építettünk össze; a jövőben robotikával és LoRa-alapú rádiókommunikációs
-        hálózatokkal tervezünk foglalkozni.
-      </p>
-      <p style={{ marginTop: "8px" }}>
-        <strong>Szerepem:</strong> 2025-ben versenyzőként, 2026-ban mentorként vettem részt.
-      </p>
+      <h2>{content.team}</h2>
+      <p>{content.team_desc}</p>
+      <p style={{ marginTop: "8px" }}>{content.role}</p>
       <p style={{ marginTop: "4px" }}>
-        <strong>Szponzoraink:</strong>{" "}
+        {content.sponsors}{" "}
         <br />
-        <a href="https://hclinear.hu/" target="_blank" rel="noopener noreferrer">HC-Linear</a>
-        {" "}(2026){" "}
-        <br />
-        <a href="https://mik.pte.hu/" target="_blank" rel="noopener noreferrer">PTE MIK</a>
-        {" "}(2025)
+        <a href="https://hclinear.hu/" target="_blank" rel="noopener noreferrer">HC-Linear</a> (2026) <br />
+        <a href="https://mik.pte.hu/" target="_blank" rel="noopener noreferrer">PTE MIK</a> (2025)
       </p>
       <div className="social-icons-row">
         <SocialIcon href="https://canseat.hu/" icon="globe" />
@@ -75,22 +98,22 @@ const RightSide = () => {
         <SocialIcon href="https://www.youtube.com/@CanSEAT" icon="youtube" />
       </div>
 
-      <h2>Érdeklődési területek</h2>
-      <div className="interest-item">Elektronika és áramkörtervezés</div>
-      <div className="interest-item">Beágyazott rendszerek és mikrokontrollerek</div>
-      <div className="interest-item">Űripar és műholdas technológiák</div>
-      <div className="interest-item">3D tervezés és nyomtatás</div>
-      <div className="interest-item">Járművek és mechanikai rendszerek</div>
+      <h2>{content.interests}</h2>
+      <div className="interest-item">{content.i1}</div>
+      <div className="interest-item">{content.i2}</div>
+      <div className="interest-item">{content.i3}</div>
+      <div className="interest-item">{content.i4}</div>
+      <div className="interest-item">{content.i5}</div>
 
-      <h2>Tanulmányok</h2>
-      <Study year="2025-" status="active" href="https://mik.pte.hu/">
-        Pécsi Tudományegyetem Műszaki és Informatikai Kar - Mérnökinformatikus BSc
+      <h2>{content.studies}</h2>
+      <Study year="2025-" status="active" href="https://mik.pte.hu/" lang={lang}>
+        {content.st1}
       </Study>
-      <Study year="2020-2025" status="done" href="https://technikum.radnoti-pecs.hu/">
-        Baranya Vármegyei SzC Radnóti Miklós Közgazdasági Technikum - Szoftverfejlesztő és -tesztelő
+      <Study year="2020-2025" status="done" href="https://technikum.radnoti-pecs.hu/" lang={lang}>
+        {content.st2}
       </Study>
-      <Study year="2012-2020" status="done" href="https://deak.pte.hu/">
-        Deák Ferenc Gimnázium és Általános Iskola
+      <Study year="2012-2020" status="done" href="https://deak.pte.hu/" lang={lang}>
+        {content.st3}
       </Study>
     </aside>
   );

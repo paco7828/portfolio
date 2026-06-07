@@ -1,4 +1,4 @@
-const Footer = () => {
+const Footer = ({ lang }) => {
   const year = new Date().getFullYear();
   return (
     <footer className="cv-footer">
