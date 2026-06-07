@@ -3,7 +3,7 @@ const Header = () => {
   return (
     <header className="cv-header">
       <h1>Kőszegi Patrik</h1>
-      <a href={`${baseUrl}cv.pdf`} download="cv.pdf" className="cv-download-btn">
+      <a href={`${import.meta.env.BASE_URL}cv.pdf`} download="cv.pdf" className="cv-download-btn">
   Önéletrajz letöltése
 </a>
       <p>
