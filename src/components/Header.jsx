@@ -3,7 +3,7 @@ const Header = () => {
   return (
     <header className="cv-header">
       <h1>Kőszegi Patrik</h1>
-      <a href={`${baseUrl}cv.pdf`} download="Koszegi_Patrik-oneletrajz.pdf" className="cv-download-btn">
+      <a href={`${baseUrl}cv.pdf`} download="cv.pdf" className="cv-download-btn">
   Önéletrajz letöltése
 </a>
       <p>
