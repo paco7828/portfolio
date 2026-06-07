@@ -1,7 +1,11 @@
+const baseUrl = import.meta.env.BASE_URL;
 const Header = () => {
   return (
     <header className="cv-header">
       <h1>Kőszegi Patrik</h1>
+      <a href={`${baseUrl}cv.pdf`} download="Koszegi_Patrik_CV.pdf" className="cv-download-btn">
+  Önéletrajz letöltése
+</a>
       <p>
         <strong>Mérnökinformatikus hallgató</strong>
         <br />
