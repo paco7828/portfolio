@@ -16,11 +16,7 @@ const Header = ({ lang, toggleLang }) => {
 
   return (
     <header className="cv-header" style={{ position: "relative" }}>
-      <button 
-        onClick={toggleLang} 
-        className="cv-lang-btn" 
-        style={{ position: "absolute", top: "10px", right: "10px", padding: "5px 10px", cursor: "pointer" }}
-      >
+      <button onClick={toggleLang} className="cv-lang-btn">
         {lang === "hu" ? "EN" : "HU"}
       </button>
       <h1>Kőszegi Patrik</h1>
