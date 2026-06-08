@@ -14,13 +14,15 @@ const Header = ({ lang, toggleLang }) => {
     },
   }[lang];
 
+  const cvFile = lang === "hu" ? "cv-hu.pdf" : "cv-en.pdf";
+
   return (
     <header className="cv-header" style={{ position: "relative" }}>
       <button onClick={toggleLang} className="cv-lang-btn">
         {lang === "hu" ? "EN" : "HU"}
       </button>
       <h1>Kőszegi Patrik</h1>
-      <a href={`${import.meta.env.BASE_URL}cv.pdf`} download="cv.pdf" className="cv-download-btn">
+      <a href={`${import.meta.env.BASE_URL}${cvFile}`} download={cvFile} className="cv-download-btn">
         {t.download}
       </a>
       <p>
