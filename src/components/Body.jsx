@@ -3,17 +3,11 @@ import { useEffect, useState, useRef, useCallback } from "react";
 const getImages = (lang) => [
   { src: "/assets/images/project1.jpg", alt: "TIL305-Clock", caption: lang === "hu" ? "TIL305 óra" : "TIL305 Clock" },
   { src: "/assets/images/project2.jpg", alt: "SAS-MK3", caption: "2026 CanSat" },
-  { src: "/assets/images/project4.jpg", alt: "displays1", caption: lang === "hu" ? "Vintage kijelző gyűjtemény" : "Vintage Display Collection" },
-  { src: "/assets/images/project4A.jpg", alt: "displays2", caption: lang === "hu" ? "Vintage kijelző gyűjtemény" : "Vintage Display Collection" },
-  { src: "/assets/images/project5.jpg", alt: "Kép 3", caption: lang === "hu" ? "CanSat LoRa kommunikáció tesztelés" : "CanSat LoRa Communication Testing" },
-  { src: "/assets/images/project6.jpg", alt: "timed-box", caption: lang === "hu" ? "Időzítővel ellátott gyógyszeres doboz" : "Timed Medication Box" },
-  { src: "/assets/images/project7.jpg", alt: "interview", caption: lang === "hu" ? "PécsiTV interjú előkészületek" : "PécsiTV Interview Preparations" },
-  { src: "/assets/images/project8.jpg", alt: "cansat-finder", caption: lang === "hu" ? "CanSat kereső eszköz prototípus" : "CanSat Finder Tool Prototype" },
-  { src: "/assets/images/project9.jpg", alt: "seven-segment-clock", caption: lang === "hu" ? "7 szegmenses kijelzős óra" : "7-Segment Display Clock" },
-  { src: "/assets/images/project10.jpg", alt: "hdsp-clock", caption: lang === "hu" ? "GPS & WiFi & RTC alapú óra" : "GPS, WiFi & RTC Based Clock" },
-  { src: "/assets/images/project11.jpg", alt: "universal-remote-v1", caption: lang === "hu" ? "Univerzális távirányító V1" : "Universal Remote V1" },
-  { src: "/assets/images/project13.jpg", alt: "universal-remote-v2", caption: lang === "hu" ? "Univerzális távirányító V2" : "Universal Remote V2" },
-  { src: "/assets/images/project12.jpg", alt: "first-vintage-display-clock", caption: lang === "hu" ? "Első retro kijelzős óra" : "First Retro Display Clock" },
+  { src: "/assets/images/project3.jpg", alt: "CanSatFinder", caption: lang === "hu" ? "CanSat Kereső eszköz" : "CanSat Finder device" },
+  { src: "/assets/images/project4.jpg", alt: "timed-box", caption: lang === "hu" ? "Időzítővel ellátott gyógyszeres doboz" : "Timed Medication Box" },
+  { src: "/assets/images/project5.jpg", alt: "retro-clock", caption: lang === "hu" ? "Retró kijelzős óra" : "Retro display clock" },
+  { src: "/assets/images/project6.jpg", alt: "interview", caption: lang === "hu" ? "PécsiTV interjú előkészületek" : "PécsiTV Interview Preparations" },
+  { src: "/assets/images/project7.jpg", alt: "universal-remote", caption: lang === "hu" ? "Univerzális távirányító" : "Universal Remote" },
 ];
 
 function Gallery({ lang }) {

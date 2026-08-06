@@ -57,7 +57,7 @@ const LeftSide = ({ lang }) => {
       s3: "Hardver: NYÁK-tervezés (EasyEDA), áramkörtervezés",
       s4: "Eszközök: Git, forrasztás, mérőeszközök",
       s5: "Egyéb: 3D tervezés és nyomtatás",
-      a1: "Top 10 - CanSat-verseny (2026)",
+      a1: "1. helyezett - CanSat Hungary 2026",
       a2: "Médiamegjelenés - PécsiTV (2026)",
       a3: "Pályán a Hunity műhold a csapatunkkal - SpaceX Transporter 15 (2025)",
       a4: "Megemlítve - SpaceJunkie élő YouTube adás (2025)",
@@ -104,7 +104,7 @@ const LeftSide = ({ lang }) => {
       </ul>
 
       <h2>{content.achievements}</h2>
-      <Achievement href="https://www.cansatverseny.hu/">{content.a1}</Achievement>
+      <Achievement href="https://blog.urvilag.hu/20260806/muhold-uditosdobozban-a-donto-tudas-kitartas-es-lelkesedes/">{content.a1}</Achievement>
       <Achievement href="https://www.youtube.com/watch?v=oTBJO4NMzr4&t">{content.a2}</Achievement>
       <Achievement href="https://gnd.bme.hu/hunity">{content.a3}</Achievement>
       <Achievement href="https://www.youtube.com/watch?v=VsbMyYeY6XA">{content.a4}</Achievement>
