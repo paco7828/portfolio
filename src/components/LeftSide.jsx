@@ -78,7 +78,7 @@ const LeftSide = ({ lang }) => {
       s3: "Hardware: PCB Design (EasyEDA), Circuit Design",
       s4: "Tools: Git, Soldering, Measuring Tools",
       s5: "Other: 3D Design & Printing",
-      a1: "Top 10 - CanSat Competition (2026)",
+      a1: "1st place - CanSat Hungary 2026",
       a2: "Media Appearance - PécsiTV (2026)",
       a3: "Hunity Satellite in Orbit with Our Team - SpaceX Transporter 15 (2025)",
       a4: "Mentioned - SpaceJunkie Live YouTube Broadcast (2025)",

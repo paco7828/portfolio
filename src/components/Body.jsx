@@ -200,7 +200,7 @@ const Body = ({ lang }) => {
     <main className="cv-body">
       <h2>{content.projects}</h2>
       <div className="project-section">
-        <ProjectCard title="SAS-MK3" sub="CanSat · 2026" link="https://canseat.hu/cdr-video-2026/" detail={content.p1_det} lang={lang} />
+        <ProjectCard title="SAS-MK3" sub="CanSat · 2026" link="https://www.youtube.com/watch?v=jxtnfJbKNK4" detail={content.p1_det} lang={lang} />
         <ProjectCard title="SAS-MK2" sub="CanSat · 2025" link="https://www.youtube.com/watch?v=VNeAm5GvCnE" detail={content.p2_det} lang={lang} />
         <ProjectCard title={lang === "hu" ? "Univerzális távirányító" : "Universal Remote"} sub="IR · ESP32 · 2023" github="https://github.com/paco7828/universal-remote" detail={content.p3_det} lang={lang} />
         <ProjectCard title={lang === "hu" ? "TIL305 Óra" : "TIL305 Clock"} sub="Retro · ESP32 · 2025" github="https://github.com/paco7828/TIL305-Clock" detail={content.p4_det} lang={lang} />
