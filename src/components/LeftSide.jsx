@@ -16,6 +16,15 @@ function Achievement({ href, children }) {
   );
 }
 
+function Certificate({ file, children }) {
+  return (
+    <a href={file} download className="achievement-item achievement-link certificate-item">
+      <span className="achievement-text">{children}</span>
+      <span className="achievement-ext">⭳</span>
+    </a>
+  );
+}
+
 function Hobby({ href, children }) {
   if (href) {
     return (
@@ -33,6 +42,8 @@ function Hobby({ href, children }) {
 }
 
 const LeftSide = ({ lang }) => {
+  const baseUrl = import.meta.env.BASE_URL;
+
   useEffect(() => {
     const timer = setTimeout(() => {
       const obs = new IntersectionObserver(
@@ -51,6 +62,7 @@ const LeftSide = ({ lang }) => {
     hu: {
       skills: "Készségek",
       achievements: "Eredmények",
+      certificates: "Mikrotanúsítványok",
       hobbies: "Hobbik",
       s1: "Beágyazott fejlesztés: C/C++, Arduino",
       s2: "Mikrokontrollerek: ESP32, AVR, RISC-V",
@@ -58,12 +70,12 @@ const LeftSide = ({ lang }) => {
       s4: "Eszközök: Git, forrasztás, mérőeszközök",
       s5: "Egyéb: 3D tervezés és nyomtatás",
       a1: "1. helyezett - CanSat Hungary 2026",
-      a2: "Médiamegjelenés - PécsiTV (2026)",
-      a3: "Pályán a Hunity műhold a csapatunkkal - SpaceX Transporter 15 (2025)",
-      a4: "Megemlítve - SpaceJunkie élő YouTube adás (2025)",
-      a5: "Kiállító - II. Hazai Űrkongresszus (2025)",
-      a6: "Kiállító - Pécsi Tudományfesztivál (2025)",
-      a7: "Tudományos különdíj - CanSat-verseny (2025)",
+      a2: "Tudományos különdíj - CanSat Hungary 2025",
+      a3: "Médiamegjelenés - PécsiTV (2026)",
+      a4: "Kiállító - II. Hazai Űrkongresszus (2025)",
+      a5: "Kiállító - Pécsi Tudományfesztivál (2025)",
+      c1: "Innovatív technológiák - jövőálló kompetenciák",
+      c2: "MI alapjai mindenkinek",
       h1: "Elektronika és barkácsolás",
       h2: "3D nyomtatás",
       h3: "Robogó szerelés",
@@ -72,6 +84,7 @@ const LeftSide = ({ lang }) => {
     en: {
       skills: "Skills",
       achievements: "Achievements",
+      certificates: "Micro-credentials",
       hobbies: "Hobbies",
       s1: "Embedded Development: C/C++, Arduino",
       s2: "Microcontrollers: ESP32, AVR, RISC-V",
@@ -79,12 +92,12 @@ const LeftSide = ({ lang }) => {
       s4: "Tools: Git, Soldering, Measuring Tools",
       s5: "Other: 3D Design & Printing",
       a1: "1st place - CanSat Hungary 2026",
-      a2: "Media Appearance - PécsiTV (2026)",
-      a3: "Hunity Satellite in Orbit with Our Team - SpaceX Transporter 15 (2025)",
-      a4: "Mentioned - SpaceJunkie Live YouTube Broadcast (2025)",
-      a5: "Exhibitor - II. National Space Congress (2025)",
-      a6: "Exhibitor - Pécs Science Festival (2025)",
-      a7: "Scientific Special Prize - CanSat Competition (2025)",
+      a2: "Scientific Special Prize - CanSat Hungary 2025",
+      a3: "Media Appearance - PécsiTV (2026)",
+      a4: "Exhibitor - II. National Space Congress (2025)",
+      a5: "Exhibitor - Pécs Science Festival (2025)",
+      c1: "Innovative Technologies - Future-Proof Competencies",
+      c2: "AI Fundamentals for Everyone",
       h1: "Electronics and DIY",
       h2: "3D Printing",
       h3: "Scooter Repair",
@@ -105,12 +118,14 @@ const LeftSide = ({ lang }) => {
 
       <h2>{content.achievements}</h2>
       <Achievement href="https://blog.urvilag.hu/20260806/muhold-uditosdobozban-a-donto-tudas-kitartas-es-lelkesedes/">{content.a1}</Achievement>
-      <Achievement href="https://www.youtube.com/watch?v=oTBJO4NMzr4&t">{content.a2}</Achievement>
-      <Achievement href="https://gnd.bme.hu/hunity">{content.a3}</Achievement>
-      <Achievement href="https://www.youtube.com/watch?v=VsbMyYeY6XA">{content.a4}</Achievement>
-      <Achievement href="https://canseat.hu/ii-hazai-urkongresszus/">{content.a5}</Achievement>
-      <Achievement href="https://tudomanyfesztival.hu/program-2025/">{content.a6}</Achievement>
-      <Achievement href="https://nmhh.hu/cikk/251203/Kihirdetek_a_CanSat_verseny_idei_dontoseit">{content.a7}</Achievement>
+      <Achievement href="https://nmhh.hu/cikk/251203/Kihirdetek_a_CanSat_verseny_idei_dontoseit">{content.a2}</Achievement>
+      <Achievement href="https://www.youtube.com/watch?v=oTBJO4NMzr4&t">{content.a3}</Achievement>
+      <Achievement href="https://canseat.hu/ii-hazai-urkongresszus/">{content.a4}</Achievement>
+      <Achievement href="https://tudomanyfesztival.hu/program-2025/">{content.a5}</Achievement>
+
+      <h2>{content.certificates}</h2>
+      <Certificate file={`${baseUrl}certificates/cert1.pdf`}>{content.c1}</Certificate>
+      <Certificate file={`${baseUrl}certificates/cert2.pdf`}>{content.c2}</Certificate>
 
       <h2>{content.hobbies}</h2>
       <Hobby>{content.h1}</Hobby>

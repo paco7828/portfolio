@@ -409,11 +409,21 @@ body {
   color: var(--sidebar-text);
   line-height: 1.4;
 }
+
 .achievement-ext {
   font-size: 0.68rem;
   color: var(--primary-color);
   flex-shrink: 0;
   margin-left: 6px;
+}
+
+.certificate-item {
+  border-left-color: var(--accent-color);
+}
+
+.certificate-item .achievement-ext {
+  font-size: 0.85rem;
+  color: var(--accent-color);
 }
 
 /* Study */
