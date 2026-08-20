@@ -799,6 +799,8 @@ a {
   border: none;
   box-shadow: 0 4px 12px rgba(192, 57, 43, 0.3);
   transition: background 0.2s ease, transform 0.2s ease;
+  will-change: transform, background;
+  transform: translateZ(0);
   cursor: pointer;
   text-decoration: none;
 }
