@@ -797,6 +797,7 @@ a {
   letter-spacing: 0.1em;
   border-radius: 6px;
   border: none;
+  position: relative;
   box-shadow: 0 4px 12px rgba(192, 57, 43, 0.3);
   transition: background 0.2s ease, transform 0.2s ease;
   will-change: transform, background;
@@ -807,7 +808,7 @@ a {
 
 .cv-download-btn:hover {
   background: var(--secondary-color);
-  transform: translateY(-2px);
+  transform: translateY(-2px) translateZ(0);
 }
 
 .cv-lang-btn {
