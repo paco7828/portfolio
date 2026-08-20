@@ -785,7 +785,7 @@ a {
   color: #ccc;
 }
 
-.cv-download-btn {
+.cv-header .cv-download-btn {
   display: inline-block;
   margin-top: 16px;
   padding: 10px 24px;
@@ -797,18 +797,15 @@ a {
   letter-spacing: 0.1em;
   border-radius: 6px;
   border: none;
-  position: relative;
   box-shadow: 0 4px 12px rgba(192, 57, 43, 0.3);
   transition: background 0.2s ease, transform 0.2s ease;
-  will-change: transform, background;
-  transform: translateZ(0);
   cursor: pointer;
   text-decoration: none;
 }
 
-.cv-download-btn:hover {
+.cv-header .cv-download-btn:hover {
   background: var(--secondary-color);
-  transform: translateY(-2px) translateZ(0);
+  transform: translateY(-2px);
 }
 
 .cv-lang-btn {
