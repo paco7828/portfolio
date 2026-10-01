@@ -76,6 +76,7 @@ const LeftSide = ({ lang }) => {
       a5: "Kiállító - Pécsi Tudományfesztivál (2025)",
       c1: "Innovatív technológiák - jövőálló kompetenciák",
       c2: "MI alapjai mindenkinek",
+      c3: "Mesterséges intelligencia alkalmazása a vállalkozásoknál",
       h1: "Elektronika és barkácsolás",
       h2: "3D nyomtatás",
       h3: "Robogó szerelés",
@@ -126,6 +127,7 @@ const LeftSide = ({ lang }) => {
       <h2>{content.certificates}</h2>
       <Certificate file={`${baseUrl}certificates/cert1.pdf`}>{content.c1}</Certificate>
       <Certificate file={`${baseUrl}certificates/cert2.pdf`}>{content.c2}</Certificate>
+      <Certificate file={`${baseUrl}certificates/cert3.pdf`}>{content.c3}</Certificate>
 
       <h2>{content.hobbies}</h2>
       <Hobby>{content.h1}</Hobby>
